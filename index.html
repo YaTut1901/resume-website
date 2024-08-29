@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+</head>
+<body class="font-['Poppins',sans-serif] flex flex-col gap-5">
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex justify-around items-center h-[15vh]">
+        <div class="text-3xl">Ivan Oberemok</div>
+        <ul class="flex gap-8 list-none text-2xl">
+            <li><a href="#about" class="hover:text-gray-500 hover:underline underline-offset-4 transition-all duration-300">About</a></li>
+            <li><a href="#skills" class="hover:text-gray-500 hover:underline underline-offset-4 transition-all duration-300">Skills</a></li>
+            <li><a href="#experience" class="hover:text-gray-500 hover:underline underline-offset-4 transition-all duration-300">Experience</a></li>
+            <li><a href="#contact" class="hover:text-gray-500 hover:underline underline-offset-4 transition-all duration-300">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="flex md:hidden justify-between items-center px-[45px] h-[15vh]">
+        <div class="text-3xl">Ivan Oberemok</div>
+        <div class="relative">
+            <div class="hamburger-icon cursor-pointer flex flex-col justify-between h-6 w-8" onclick="toggleMenu()">
+                <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+                <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+                <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            </div>
+            <ul class="absolute top-full right-0 bg-white transition-all duration-300 overflow-hidden max-h-0 menu-links">
+                <li><a href="#about" onclick="toggleMenu()" class="block p-2 text-center text-2xl">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()" class="block p-2 text-center text-2xl">Experience</a></li>
+                <li><a href="#skills" onclick="toggleMenu()" class="block p-2 text-center text-2xl">Skills</a></li>
+                <li><a href="#contact" onclick="toggleMenu()" class="block p-2 text-center text-2xl">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile" class="flex flex-col md:flex-row min-h-[70vh] justify-center items-center md:gap-20 gap-14 px-40">
+        <div class="flex justify-center items-center md:h-96 md:w-96 h-72 w-72">
+            <img src="./assets/profile-pic.png" alt="Profile picture" class="h-full w-full object-contain" />
+        </div>
+        <div class="text-center">
+            <p class="font-semibold text-gray-500">Hello, I'm</p>
+            <h1 class="text-5xl font-bold">Ivan Oberemok</h1>
+            <p class="text-2xl font-semibold text-gray-500 mt-4 whitespace-nowrap">Ethereum Smart Contract Developer</p>
+            <div class="flex justify-center gap-4 mt-6">
+                <button class="font-semibold transition-all duration-300 p-4 w-32 rounded-full border border-gray-800 hover:bg-gray-800 hover:text-white" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+                <button class="font-semibold transition-all duration-300 p-4 w-32 rounded-full border border-gray-800 bg-gray-800 text-white hover:bg-black" onclick="location.href='#contact'">Contact Info</button>
+            </div>
+            <div class="flex justify-center gap-4 mt-4">
+                <a href="https://www.linkedin.com/in/ivan-oberemok/" target="_blank">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="h-8 cursor-pointer" />
+                </a>
+                <a href="https://github.com/YaTut1901" target="_blank">
+                    <img src="./assets/github.png" alt="My Github profile" class="h-8 cursor-pointer" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="flex flex-col items-center gap-10 py-16 px-40 min-h-[100vh]">
+        <div>
+            <p class="text-center font-semibold text-gray-500">Get To Know More</p>
+            <h1 class="text-5xl font-bold text-center">About Me</h1>
+        </div>
+        <div class="flex flex-col md:flex-row">
+            <div class="flex justify-center items-center h-96 w-96 m-12">
+                <img src="./assets/about-pic.png" alt="About Me Picture" class="object-contain rounded-2xl" />
+            </div>
+            <div class="flex flex-col md:w-3/5 w-full gap-5">
+                <div class="flex gap-5">
+                    <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl w-1/2 p-5">
+                        <img src="./assets/experience.png" alt="Experience icon" class="size-8" />
+                        <h3 class="font-semibold text-lg ">Experience</h3>
+                        <div class="flex items-center flex-col text-gray-500">
+                          <p>3+ years</p>
+                          <p>Software Engineer</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl w-1/2 p-5">
+                        <img src="./assets/education.png" alt="Education icon" class="size-8" />
+                        <h3 class="font-semibold text-lg">Education</h3>
+                        <div class="flex justify-between w-full items-center">
+                            <a href="https://metana.io/web3-solidity-bootcamp-ethereum-blockchain/" target="_blank" class="w-32">
+                                <img src="./assets/metana-logo.png" alt="Metana logo" class=""/>
+                            </a>
+                            <h4 class="text-gray-500 text-center w-1/2">Web3 Solidity Bootcamp</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-lg md:text-left">
+                    <p>
+                      Starting as a Java developer 4 years ago, my journey in software development has been rapid and filled with
+                      various technologies. I have worked with both backend and frontend stacks, as well as handled DevOps tools
+                      like Kubernetes, Grafana, Docker, etc. A year ago, my previous employer, Venly.io, introduced me to the
+                      Ethereum blockchain technologies stack, and I realized that this is what I want to work with.
+                    </p>
+                    <br>
+                    <p>
+                      <h4 class="font-semibold">💁‍♂️ Personal traits:</h4>
+                      &emsp; ⭐ Communication skills
+                      <br>
+                      &emsp; ⭐ Attention to details
+                      <br>
+                      &emsp; ⭐ Prioritization
+                      <br>
+                      &emsp; ⭐ Problem solving
+                    </p>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="flex flex-col gap-10 py-16 min-h-[100vh] px-40">
+        <div>
+            <p class="text-center font-semibold text-gray-500">Check My</p>
+            <h1 class="text-5xl font-bold text-center">Skills</h1>
+        </div>
+        <div class="flex gap-5 flex-col">
+            <div class="flex gap-5">
+                <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl w-1/2 p-5">
+                    <img src="./assets/contract.png" alt="Smart contract icon" class="size-10" />
+                    <h3 class="font-semibold text-2xl">Smart Contracts</h3>
+                    <br>
+                    <ul class="grid w-full justify-center gap-5 px-4" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+                        <li class="flex gap-1 items-center">
+                            <img src="./assets/solidity-logo.svg" alt="Solidity icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">Solidity</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/ipfs.svg" alt="IPFS icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">IPFS</h3>
+                        </li>
+                        <li class="flex gap-1 items-center">
+                            <img src="./assets/ethers-js.png" alt="Ethers.js icon" class="w-10" />
+                            <h3 class="font-semibold text-lg ">Ethers.js</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/scaffold-eth-logo.png" alt="scaffold icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">Scaffold-eth-2</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/web3js-logo.png" alt="web3js icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">Web3.js</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/hardhat-logo.png" alt="hardhat-logo icon" class="w-10" />
+                            <h3 class="font-semibold text-lg ">Hardhat</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/foundry-logo.png" alt="foundry icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">Foundry</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/slither-logo.png" alt="slither icon" class="size-10 rounded-lg" />
+                            <h3 class="font-semibold text-lg ">Slither</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/alchemy-logo.png" alt="Alchemy icon" class="size-10 rounded-lg" />
+                            <h3 class="font-semibold text-lg ">Alchemy</h3>
+                        </li>
+                        <li class="flex gap-1 items-center">
+                            <img src="./assets/auditing.png" alt="auditing icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">Smart Contract Security Audit</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/gas.png" alt="gas icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">EVM Gas Optimization</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/upgrade.png" alt="upgrade icon" class="size-12 rounded-lg" />
+                            <h3 class="font-semibold text-lg ">Upgradeable Contracts</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/bytes.png" alt="bytes icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">YUL and Byte Manipulations</h3>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl w-1/2 p-5">
+                    <img src="./assets/frontend.png" alt="Frontend icon" class="size-10" />
+                    <h3 class="font-semibold text-2xl">Frontend</h3>
+                    <br>
+                    <ul class="grid w-full justify-center gap-5 px-4" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+                        <li class="flex gap-1 items-center">
+                            <img src="./assets/html.png" alt="Html icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">HTML</h3>
+                        </li>
+                        <li class="flex gap-1 items-center">
+                            <img src="./assets/css.png" alt="css icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">CSS</h3>
+                        </li>
+                        <li class="flex gap-1 items-center">
+                            <img src="./assets/js.png" alt="js icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">JavaScript</h3>
+                        </li>
+                        <li class="flex gap-1 items-center">
+                            <img src="./assets/tailwind.svg" alt="tailwindcss icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">Tailwind CSS</h3>
+                        </li>
+                        <li class="flex gap-1 items-center">
+                            <img src="./assets/react.png" alt="react icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">React.js</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/typescript.png" alt="typescript icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">TypeScript</h3>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <img src="./assets/nextjs.svg" alt="next icon" class="size-10" />
+                            <h3 class="font-semibold text-lg ">NextJS</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl p-5">
+                <img src="./assets/other-skills.png" alt="Other skills icon" class="size-10" />
+                <h3 class="font-semibold text-2xl">Other skills</h3>
+                <br>
+                <ul class="grid w-full justify-center gap-5 px-4" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+                    <li class="flex gap-2 items-center">
+                        <img src="./assets/java.png" alt="Java icon" class="w-8" />
+                        <h3 class="font-semibold text-lg ">Java</h3>
+                    </li>
+                    <li class="flex gap-1 items-center">
+                        <img src="./assets/docker.png" alt="docker icon" class="w-10" />
+                        <h3 class="font-semibold text-lg ">Docker</h3>
+                    </li>
+                    <li class="flex gap-1 items-center">
+                        <img src="./assets/kubernetes.png" alt="kubernetes icon" class="size-10" />
+                        <h3 class="font-semibold text-lg ">Kubernetes</h3>
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <img src="./assets/gp.png" alt="gp icon" class="h-10 w-12 object-cover" />
+                        <h3 class="font-semibold text-lg ">Grafana & Prometheus</h3>
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <img src="./assets/spring.svg" alt="spring icon" class="size-10" />
+                        <h3 class="font-semibold text-lg ">Spring</h3>
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <img src="./assets/postgresql.png" alt="postgresql icon" class="size-10" />
+                        <h3 class="font-semibold text-lg ">PostgreSQL</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="flex flex-col gap-10 py-16 min-h-[100vh] px-40">
+        <div>
+            <p class="text-center font-semibold text-gray-500">Discover My</p>
+            <h1 class="text-5xl font-bold text-center">Professional Experience</h1>
+        </div>
+        <div class="flex flex-col gap-5">
+            <div class="flex flex-col items-center gap-5 border-2 border-gray-300 rounded-3xl p-8">
+                <h2 class="flex text-2xl font-semibold items-center gap-2">
+                    <a href="https://www.venly.io/" target="_blank" class="flex gap-2">
+                        <img src="./assets/venly-logo.png" alt="Venly logo" class="w-8 h-8 rounded-lg">
+                        <div>Venly.io</div>
+                    </a>
+                    <div> | </div>
+                    <div>Mar 2023 - Dec 2023</div>
+                </h2>
+                <p class="text-center text-lg"><strong>Role: </strong>Backend Developer focused on building and optimizing scalable backend systems for blockchain applications.</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>REST API:</strong> Secured over 30 Spring endpoints by implementing custom validation.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Databases:</strong> Created a set of database procedures to clean up inactive wallets, reducing the number of records by 17%.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Optimization:</strong> Refactored more than 220 classes, reducing code duplication by 10%.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Support:</strong> Resolved more than 50 bugs, reducing the backlog by 25%.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Testing:</strong> Implemented over 120 test classes, increasing code coverage by 13%.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>DevOps:</strong> Created a GitHub Actions pipeline for AWS S3 file uploads.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Team Collaboration:</strong> Onboarded and guided new employees through project setup.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Design:</strong> Standardized EVM networks integration, reducing the codebase size by 8%.
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-center text-lg">
+                    <strong>Technologies used:</strong> Java 17, Spring, PostgreSQL, TypeScript, REST API, JPA, JCE, bitcoinj/bitcoinj, hyperledger/web3j, hashgraph/hedera-sdk-java, GitHub Actions
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-5 border-2 border-gray-300 rounded-3xl p-8">
+                <h2 class="flex text-2xl font-semibold items-center gap-2">
+                    <a href="https://www.globallogic.com" target="_blank" class="flex gap-2">
+                        <img src="./assets/gl-logo.png" alt="GL logo" class="w-8 h-8 rounded-lg">
+                        <div>
+                            GlobalLogic Ukraine
+                        </div>
+                    </a>
+                    <div> | </div>
+                    <div>
+                        May 2021 - Jul 2022
+                    </div>
+                </h2>
+                <p class="text-center text-lg"><strong>Role: </strong>Software Engineer with a focus on orchestrated architecture</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Observability:</strong> Implemented a Grafana + Prometheus setup with more than 30 dashboards, which helped to identify 3 memory leaks and 1 CPU leak.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Support:</strong> Analyzed more than 20 Gb of logs from orchestrated services, which helped to detect a critical issue on synchronization of recovered database replicas.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Mentoring:</strong> Onboarded and guided new trainee developer through his way to becoming a junior developer.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Debugging:</strong> Debugged remotely deployed services, define 5+ JIRA tickets on services owners
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Team Collaboration:</strong> Helped new team members with their tasks, which increased the team's productivity by 10%.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Documentation:</strong> Created 10+ documentation articles on project CPI, improved documentation readability and quality.
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-center text-lg">
+                    <strong>Technologies used:</strong> Java 11, Spring, PostgreSQL, Docker, Kubernetes, Helm, Grafana, Prometheus, JPA, REST API, JCE
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-5 border-2 border-gray-300 rounded-3xl p-5">
+                <h2 class="flex text-2xl font-semibold items-center gap-2">
+                    <a href="https://www.softserveinc.com" target="_blank" class="flex gap-2">
+                        <img src="./assets/softserve-logo.png" alt="S logo" class="w-8 h-8 rounded-lg">
+                        <div>
+                            SoftServe Inc.
+                        </div>
+                    </a>
+                    <div> | </div>
+                    <div>
+                        Dec 2020 - May 2021
+                    </div>
+                </h2>
+                <p class="text-center text-lg"><strong>Role: </strong>Junior Software Engineer</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Technologies:</strong> Learned more than 10 new technologies, which were used in project.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Projects:</strong> Developed 7 pet projects, which led me to high mark on promotion screening.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Team Collaboration:</strong> Received guidance from senior developers, which helped to improve my coding skills.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
+                        <div class="text-lg">
+                            <strong>Documentation:</strong> Created presentation on provided topic, which helped to improve the team's understanding of the project.
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-center text-lg">
+                    <strong>Technologies used:</strong> Java 8, Spring, Hibernate, Maven, SQL, Git, Linux, Nginx, Docker, Docker Compose, RabbitMQ
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="flex flex-col gap-10 py-16 px-40">
+        <div>
+            <p class="text-center font-semibold text-gray-500">Get In Touch</p>
+            <h1 class="text-5xl font-bold text-center">Contact Me</h1>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10 border-2 border-gray-300 rounded-3xl text-2xl p-5 mx-auto">
+            <div class="flex gap-2 items-center">
+                <img src="./assets/email.png" alt="Email icon" class="h-10 w-10" />
+                <p><a href="mailto:ivan.oberemok1@gmail.com" class="hover:text-gray-500 transition-all duration-300">ivan.oberemok1@gmail.com</a></p>
+            </div>
+            <div class="flex gap-2 items-center">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="h-8 w-8" />
+                <p><a href="https://www.linkedin.com/in/ivan-oberemok/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-500 transition-all duration-300">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="h-[26vh] flex flex-col justify-center items-center px-4">
+        <p class="text-center">© 2024 Ivan Oberemok. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-links');
+            menu.classList.toggle('max-h-[300px]');
+        }
+    </script>
+</body>
+</html>
