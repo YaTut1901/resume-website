@@ -31,11 +31,11 @@
                 <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
                 <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
             </div>
-            <ul class="absolute top-full right-0 bg-white transition-all duration-300 overflow-hidden max-h-0 menu-links">
-                <li><a href="#about" onclick="toggleMenu()" class="block p-2 text-center text-2xl">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()" class="block p-2 text-center text-2xl">Experience</a></li>
-                <li><a href="#skills" onclick="toggleMenu()" class="block p-2 text-center text-2xl">Skills</a></li>
-                <li><a href="#contact" onclick="toggleMenu()" class="block p-2 text-center text-2xl">Contact</a></li>
+            <ul class="absolute top-full shadow-2xl rounded-lg right-0 bg-white transition-all duration-300 overflow-hidden max-h-0 menu-links">
+                <li><a href="#about" onclick="toggleMenu()" class="block p-2 hover:text-gray-500 hover:underline underline-offset-4 transition-all duration-300 text-center text-2xl">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()" class="block p-2 hover:text-gray-500 hover:underline underline-offset-4 transition-all duration-300 text-center text-2xl">Experience</a></li>
+                <li><a href="#skills" onclick="toggleMenu()" class="block p-2 hover:text-gray-500 hover:underline underline-offset-4 transition-all duration-300 text-center text-2xl">Skills</a></li>
+                <li><a href="#contact" onclick="toggleMenu()" class="block p-2 hover:text-gray-500 hover:underline underline-offset-4 transition-all duration-300 text-center text-2xl">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -48,7 +48,7 @@
         <div class="text-center">
             <p class="font-semibold text-gray-500">Hello, I'm</p>
             <h1 class="text-5xl font-bold">Ivan Oberemok</h1>
-            <p class="text-2xl font-semibold text-gray-500 mt-4 whitespace-nowrap">Ethereum Smart Contract Developer</p>
+            <p class="text-2xl font-semibold text-gray-500 mt-4">Ethereum Smart Contract Developer</p>
             <div class="flex justify-center gap-4 mt-6">
                 <button class="font-semibold transition-all duration-300 p-4 w-32 rounded-full border border-gray-800 hover:bg-gray-800 hover:text-white" onclick="window.open('./assets/resume.pdf')">Download CV</button>
                 <button class="font-semibold transition-all duration-300 p-4 w-32 rounded-full border border-gray-800 bg-gray-800 text-white hover:bg-black" onclick="location.href='#contact'">Contact Info</button>
@@ -65,18 +65,18 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="flex flex-col items-center gap-10 py-16 px-40 min-h-[100vh]">
+    <section id="about" class="flex flex-col items-center gap-10 py-16 px-20 min-h-[100vh]">
         <div>
             <p class="text-center font-semibold text-gray-500">Get To Know More</p>
-            <h1 class="text-5xl font-bold text-center">About Me</h1>
+            <h1 class="text-5xl font-bold text-center whitespace-nowrap">About Me</h1>
         </div>
-        <div class="flex flex-col md:flex-row">
-            <div class="flex justify-center items-center h-96 w-96 m-12">
+        <div class="flex flex-col md:flex-row gap-5 justify-center items-center">
+            <div class="flex justify-center items-center md:h-96 md:w-96 md:m-12 w-5/6 h-5/6">
                 <img src="./assets/about-pic.png" alt="About Me Picture" class="object-contain rounded-2xl" />
             </div>
             <div class="flex flex-col md:w-3/5 w-full gap-5">
-                <div class="flex gap-5">
-                    <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl w-1/2 p-5">
+                <div class="flex gap-5 sm:flex-row flex-col">
+                    <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl sm:w-1/2 sm:p-5 p-3">
                         <img src="./assets/experience.png" alt="Experience icon" class="size-8" />
                         <h3 class="font-semibold text-lg ">Experience</h3>
                         <div class="flex items-center flex-col text-gray-500">
@@ -84,7 +84,7 @@
                           <p>Software Engineer</p>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl w-1/2 p-5">
+                    <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl sm:w-1/2 p-5">
                         <img src="./assets/education.png" alt="Education icon" class="size-8" />
                         <h3 class="font-semibold text-lg">Education</h3>
                         <div class="flex justify-between w-full items-center">
@@ -119,18 +119,19 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="flex flex-col gap-10 py-16 min-h-[100vh] px-40">
+    <section id="skills" class="flex flex-col gap-10 min-h-[100vh] justify-center items-center sm:mx-5">
         <div>
-            <p class="text-center font-semibold text-gray-500">Check My</p>
-            <h1 class="text-5xl font-bold text-center">Skills</h1>
+            <p class="text-center font-semibold text-gray-500 whitespace-nowrap">Check My</p>
+            <h1 class="text-5xl font-bold text-center whitespace-nowrap">Skills</h1>
         </div>
         <div class="flex gap-5 flex-col">
-            <div class="flex gap-5">
-                <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl w-1/2 p-5">
-                    <img src="./assets/contract.png" alt="Smart contract icon" class="size-10" />
-                    <h3 class="font-semibold text-2xl">Smart Contracts</h3>
-                    <br>
-                    <ul class="grid w-full justify-center gap-5 px-4" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+            <div class="flex gap-5 sm:flex-row flex-col">
+                <div class="flex flex-[2] flex-col items-center justify-center sm:border-2 sm:border-gray-300 rounded-3xl w-full">
+                    <div class="flex sm:flex-col flex-row items-center justify-center bg-gray-200 sm:bg-transparent w-full gap-3 sm:gap-0 p-5 sm:p-0 sm:pt-5">
+                        <img src="./assets/contract.png" alt="Smart contract icon" class="size-10" />
+                        <h3 class="font-semibold text-2xl text-center">Smart Contracts</h3>
+                    </div>
+                    <ul class="grid w-full justify-center grid-cols-2 place-items-center gap-5 p-5" >
                         <li class="flex gap-1 items-center">
                             <img src="./assets/solidity-logo.svg" alt="Solidity icon" class="size-10" />
                             <h3 class="font-semibold text-lg ">Solidity</h3>
@@ -169,11 +170,11 @@
                         </li>
                         <li class="flex gap-1 items-center">
                             <img src="./assets/auditing.png" alt="auditing icon" class="size-10" />
-                            <h3 class="font-semibold text-lg ">Smart Contract Security Audit</h3>
+                            <h3 class="font-semibold text-lg ">Security audit</h3>
                         </li>
                         <li class="flex gap-2 items-center">
                             <img src="./assets/gas.png" alt="gas icon" class="size-10" />
-                            <h3 class="font-semibold text-lg ">EVM Gas Optimization</h3>
+                            <h3 class="font-semibold text-lg ">Gas optimization</h3>
                         </li>
                         <li class="flex gap-2 items-center">
                             <img src="./assets/upgrade.png" alt="upgrade icon" class="size-12 rounded-lg" />
@@ -181,15 +182,16 @@
                         </li>
                         <li class="flex gap-2 items-center">
                             <img src="./assets/bytes.png" alt="bytes icon" class="size-10" />
-                            <h3 class="font-semibold text-lg ">YUL and Byte Manipulations</h3>
+                            <h3 class="font-semibold text-lg ">Solidity Assembly</h3>
                         </li>
                     </ul>
                 </div>
-                <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl w-1/2 p-5">
-                    <img src="./assets/frontend.png" alt="Frontend icon" class="size-10" />
-                    <h3 class="font-semibold text-2xl">Frontend</h3>
-                    <br>
-                    <ul class="grid w-full justify-center gap-5 px-4" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+                <div class="flex flex-[1] flex-col items-center sm:border-2 sm:border-gray-300 rounded-3xl w-full">
+                    <div class="flex sm:flex-col flex-row items-center justify-center bg-gray-200 sm:bg-transparent w-full gap-3 sm:gap-0 p-5 sm:p-0 sm:pt-5">
+                        <img src="./assets/frontend.png" alt="Frontend icon" class="size-10" />
+                        <h3 class="font-semibold text-2xl text-center">Frontend</h3>
+                    </div>
+                    <ul class="grid w-full justify-center grid-cols-2 sm:grid-cols-1 place-items-center gap-5 p-5" >
                         <li class="flex gap-1 items-center">
                             <img src="./assets/html.png" alt="Html icon" class="size-10" />
                             <h3 class="font-semibold text-lg ">HTML</h3>
@@ -221,11 +223,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-3 border-2 border-gray-300 rounded-3xl p-5">
-                <img src="./assets/other-skills.png" alt="Other skills icon" class="size-10" />
-                <h3 class="font-semibold text-2xl">Other skills</h3>
-                <br>
-                <ul class="grid w-full justify-center gap-5 px-4" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+            <div class="flex flex-col items-center sm:border-2 border-gray-300 sm:rounded-3xl w-full">
+                <div class="flex sm:flex-col flex-row items-center justify-center bg-gray-200 sm:bg-transparent w-full gap-3 sm:gap-0 p-5 sm:p-0 sm:pt-5">
+                    <img src="./assets/other-skills.png" alt="Other skills icon" class="size-10" />
+                    <h3 class="font-semibold text-2xl text-center">Other skills</h3>
+                </div>
+                <ul class="grid w-full justify-center grid-cols-2 place-items-center gap-5 p-5">
                     <li class="flex gap-2 items-center">
                         <img src="./assets/java.png" alt="Java icon" class="w-8" />
                         <h3 class="font-semibold text-lg ">Java</h3>
@@ -256,23 +259,23 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="flex flex-col gap-10 py-16 min-h-[100vh] px-40">
+    <section id="experience" class="flex flex-col gap-10 min-h-[100vh] sm:mx-5">
         <div>
             <p class="text-center font-semibold text-gray-500">Discover My</p>
             <h1 class="text-5xl font-bold text-center">Professional Experience</h1>
         </div>
-        <div class="flex flex-col gap-5">
-            <div class="flex flex-col items-center gap-5 border-2 border-gray-300 rounded-3xl p-8">
-                <h2 class="flex text-2xl font-semibold items-center gap-2">
+        <div class="grid grid-cols-1 max-w-[830px] mx-auto gap-5">
+            <div class="flex flex-col items-center gap-5 sm:border-2 sm:border-gray-300 sm:rounded-3xl sm:p-5">
+                <h2 class="flex flex-col sm:flex-row text-2xl font-semibold items-center justify-center gap-2 bg-gray-200 sm:bg-transparent w-full p-5">
                     <a href="https://www.venly.io/" target="_blank" class="flex gap-2">
                         <img src="./assets/venly-logo.png" alt="Venly logo" class="w-8 h-8 rounded-lg">
                         <div>Venly.io</div>
                     </a>
-                    <div> | </div>
-                    <div>Mar 2023 - Dec 2023</div>
+                    <div class="hidden sm:block"> | </div>
+                    <div class="whitespace-nowrap">Mar 2023 - Dec 2023</div>
                 </h2>
-                <p class="text-center text-lg"><strong>Role: </strong>Backend Developer focused on building and optimizing scalable backend systems for blockchain applications.</p>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                <p class="text-center text-lg px-5"><strong>Role: </strong>Backend Developer focused on building and optimizing scalable backend systems for blockchain applications.</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full px-5">
                     <li class="flex items-start gap-2">
                         <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
                         <div class="text-lg">
@@ -322,25 +325,23 @@
                         </div>
                     </li>
                 </ul>
-                <div class="text-center text-lg">
+                <div class="text-center text-lg px-5">
                     <strong>Technologies used:</strong> Java 17, Spring, PostgreSQL, TypeScript, REST API, JPA, JCE, bitcoinj/bitcoinj, hyperledger/web3j, hashgraph/hedera-sdk-java, GitHub Actions
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-5 border-2 border-gray-300 rounded-3xl p-8">
-                <h2 class="flex text-2xl font-semibold items-center gap-2">
+            <div class="flex flex-col items-center gap-5 sm:border-2 sm:border-gray-300 rounded-3xl">
+                <h2 class="flex flex-col sm:flex-row text-2xl font-semibold items-center gap-2 bg-gray-200 sm:bg-transparent justify-center w-full p-5">
                     <a href="https://www.globallogic.com" target="_blank" class="flex gap-2">
                         <img src="./assets/gl-logo.png" alt="GL logo" class="w-8 h-8 rounded-lg">
-                        <div>
-                            GlobalLogic Ukraine
+                        <div class="whitespace-nowrap">
+                            GlobalLogic
                         </div>
                     </a>
-                    <div> | </div>
-                    <div>
-                        May 2021 - Jul 2022
-                    </div>
+                    <div class="hidden sm:block"> | </div>
+                    <div class="whitespace-nowrap">May 2021 - Jul 2022</div>
                 </h2>
-                <p class="text-center text-lg"><strong>Role: </strong>Software Engineer with a focus on orchestrated architecture</p>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                <p class="text-center text-lg px-5"><strong>Role: </strong>Software Engineer with a focus on orchestrated architecture</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full px-5">
                     <li class="flex items-start gap-2">
                         <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
                         <div class="text-lg">
@@ -378,25 +379,23 @@
                         </div>
                     </li>
                 </ul>
-                <div class="text-center text-lg">
+                <div class="text-center text-lg px-5">
                     <strong>Technologies used:</strong> Java 11, Spring, PostgreSQL, Docker, Kubernetes, Helm, Grafana, Prometheus, JPA, REST API, JCE
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-5 border-2 border-gray-300 rounded-3xl p-5">
-                <h2 class="flex text-2xl font-semibold items-center gap-2">
+            <div class="flex flex-col items-center gap-5 sm:border-2 sm:border-gray-300 rounded-3xl">
+                <h2 class="flex flex-col sm:flex-row text-2xl font-semibold items-center justify-center gap-2 bg-gray-200 sm:bg-transparent w-full p-5">
                     <a href="https://www.softserveinc.com" target="_blank" class="flex gap-2">
                         <img src="./assets/softserve-logo.png" alt="S logo" class="w-8 h-8 rounded-lg">
                         <div>
                             SoftServe Inc.
                         </div>
                     </a>
-                    <div> | </div>
-                    <div>
-                        Dec 2020 - May 2021
-                    </div>
+                    <div class="hidden sm:block"> | </div>
+                    <div class="whitespace-nowrap">Dec 2020 - May 2021</div>
                 </h2>
-                <p class="text-center text-lg"><strong>Role: </strong>Junior Software Engineer</p>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                <p class="text-center text-lg px-5"><strong>Role: </strong>Junior Software Engineer</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full px-5">
                     <li class="flex items-start gap-2">
                         <img src="./assets/checkmark.png" alt="Check icon" class="w-6 h-6 mt-1" />
                         <div class="text-lg">
@@ -422,28 +421,104 @@
                         </div>
                     </li>
                 </ul>
-                <div class="text-center text-lg">
+                <div class="text-center text-lg px-5">
                     <strong>Technologies used:</strong> Java 8, Spring, Hibernate, Maven, SQL, Git, Linux, Nginx, Docker, Docker Compose, RabbitMQ
+                </div>
+            </div>
+        </div>
+    </section> 
+    
+    <!-- Projects Section -->
+    <section id="projects" class="flex flex-col gap-5 min-h-[100vh] sm:mx-5">
+        <div class="flex flex-col sm:gap-0 gap-3 items-center">
+            <p class="text-center font-semibold text-gray-500 whitespace-nowrap">GitHub Projects &</p>
+            <h1 class="text-5xl font-bold text-center whitespace-nowrap">Contributions</h1>
+        </div>
+        <div class="flex sm:flex-row flex-col sm:gap-5 max-w-[830px] mx-auto items-center justify-center p-5 sm:border-2 sm:border-gray-300 rounded-3xl">
+            <div class="flex flex-col items-center sm:min-w-[200px]">
+                <img src="./assets/fuels.png" alt="Fuels logo" class="w-64 h-64 rounded-lg object-contain" />
+                <h2 class="text-2xl font-bold whitespace-nowrap">Fuels TS</h2>
+            </div>
+            <div>
+                <p class="text-lg">The Fuel TypeScript SDK provides methods and utilities in TypeScript, for developing on or interacting with the Fuel network and its ecosystem</p>
+                <div class="flex gap-4 mt-3">
+                    <span class="text-gray-500">
+                        <strong>Commits:</strong> <span id="fuels-commit-count">N/A</span>
+                    </span>
+                    <span class="text-gray-500">
+                        <strong>PRs:</strong> <span id="fuels-pr-count">N/A</span>
+                    </span>
+                    <span class="text-gray-500">
+                        <strong>Issues:</strong> <span id="fuels-issue-count">N/A</span>
+                    </span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 bg-gray-200 rounded-full">TypeScript</span>
+                </div>
+                <div class="flex gap-4 mt-4">
+                    <a href="https://github.com/FuelLabs/fuels-ts" target="_blank" class="flex items-center gap-2">
+                        <img src="./assets/github.png" alt="GitHub" class="w-6"/>
+                        Repository
+                    </a>
+                    <a href="https://fuel.network/" target="_blank" class="flex items-center gap-2">
+                        <img src="./assets/website.png" alt="Demo" class="w-6"/>
+                        Project website
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex sm:flex-row flex-col sm:gap-5 items-center justify-center max-w-[830px] mx-auto p-5 sm:border-2 sm:border-gray-300 rounded-3xl">
+            <div class="flex flex-col items-center sm:min-w-[200px]">
+                <img src="./assets/explorer.png" alt="Fuels logo" class="w-64 h-64 rounded-lg object-contain" />
+                <h2 class="text-2xl font-bold whitespace-nowrap">Solana Explorer</h2>
+            </div>
+            <div>
+                <p class="text-lg">The Solana Explorer is a web application that allows users to view and analyze transactions, accounts, and other blockchain data on the Solana network. It provides a user-friendly interface for exploring the Solana blockchain.</p>
+                <div class="flex gap-4 mt-3">
+                    <span class="text-gray-500">
+                        <strong>Commits:</strong> <span id="explorer-commit-count">N/A</span>
+                    </span>
+                    <span class="text-gray-500">
+                        <strong>PRs:</strong> <span id="explorer-pr-count">N/A</span>
+                    </span>
+                    <span class="text-gray-500">
+                        <strong>Issues:</strong> <span id="explorer-issue-count">N/A</span>
+                    </span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 bg-gray-200 rounded-full">TypeScript</span>
+                    <span class="px-3 py-1 bg-gray-200 rounded-full">React</span>
+                    <span class="px-3 py-1 bg-gray-200 rounded-full">NextJS</span>
+                </div>
+                <div class="flex gap-4 mt-4">
+                    <a href="https://github.com/solana-labs/explorer" target="_blank" class="flex items-center gap-2">
+                        <img src="./assets/github.png" alt="GitHub" class="w-6"/>
+                        Repository
+                    </a>
+                    <a href="https://explorer.solana.com/" target="_blank" class="flex items-center gap-2">
+                        <img src="./assets/website.png" alt="Demo" class="w-6"/>
+                        Project website
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="flex flex-col gap-10 py-16 px-40">
-        <div>
-            <p class="text-center font-semibold text-gray-500">Get In Touch</p>
-            <h1 class="text-5xl font-bold text-center">Contact Me</h1>
+    <section id="contact" class="flex flex-col items-center justify-center gap-10 min-h-[90vh]">
+        <div class="flex flex-col items-center">
+            <p class="text-center font-semibold text-gray-500 whitespace-nowrap">Get In Touch</p>
+            <h1 class="text-5xl font-bold text-center whitespace-nowrap">Contact Me</h1>
         </div>
-        <div class="flex flex-col md:flex-row items-center justify-center gap-10 border-2 border-gray-300 rounded-3xl text-2xl p-5 mx-auto">
-            <div class="flex gap-2 items-center">
-                <img src="./assets/email.png" alt="Email icon" class="h-10 w-10" />
-                <p><a href="mailto:ivan.oberemok1@gmail.com" class="hover:text-gray-500 transition-all duration-300">ivan.oberemok1@gmail.com</a></p>
-            </div>
-            <div class="flex gap-2 items-center">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="h-8 w-8" />
-                <p><a href="https://www.linkedin.com/in/ivan-oberemok/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-500 transition-all duration-300">LinkedIn</a></p>
-            </div>
+        <div class="flex items-center justify-center gap-10 sm:border-2 sm:border-gray-300 rounded-3xl text-2xl p-5 mx-auto">
+            <a href="mailto:ivan.oberemok1@gmail.com" class="flex gap-2 items-center">
+                <img src="./assets/email.png" alt="Email icon" class="sm:h-10 sm:w-10 h-14 w-14 hover:animate-bounce" />
+                <p class="hover:text-gray-500 transition-all duration-300 sm:block hidden">ivan.oberemok1@gmail.com</p>
+            </a>
+            <a href="https://www.linkedin.com/in/ivan-oberemok/" target="_blank" rel="noopener noreferrer" class="flex gap-2 items-center">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="sm:h-8 sm:w-8 h-12 w-12 hover:animate-bounce" />
+                <p class="hover:text-gray-500 transition-all duration-300 sm:block hidden">LinkedIn</p>
+            </a>
         </div>
     </section>
 
@@ -456,6 +531,63 @@
             const menu = document.querySelector('.menu-links');
             menu.classList.toggle('max-h-[300px]');
         }
+
+        async function fetchGitHubStats(owner, repo) {
+            const headers = {
+                "Authorization": "Bearer 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",
+                "Accept": "application/vnd.github.v3+json"
+            }
+
+            try {
+                const prsResponse = await fetch(
+                    `https://api.github.com/search/issues?q=is:pr+author:YaTut1901+repo:${owner}/${repo}`, {
+                        headers: headers
+                    }
+                );
+                const prs = await prsResponse.json();
+
+                const issuesResponse = await fetch(
+                    `https://api.github.com/search/issues?q=type:issue+assignee:YaTut1901+repo:${owner}/${repo}`, {
+                        headers: headers
+                    }
+                );
+                const issues = await issuesResponse.json();
+
+                const commitsResponse = await fetch(
+                    `https://api.github.com/repos/${owner}/${repo}/commits?author=YaTut1901`, {
+                        headers: headers
+                    }
+                );
+                const commits = await commitsResponse.json();
+
+                return {
+                    prs: prs.total_count,
+                    issues: issues.total_count,
+                    commits: commits.length
+                };
+            } catch (error) {
+                console.error('Error fetching GitHub stats:', error);
+                return null;
+            }
+        }
+
+        async function updateStats(owner, repo, projectName) {
+            const stats = await fetchGitHubStats(owner, repo);
+        
+            if (stats) {
+                document.getElementById(`${projectName}-commit-count`).textContent = stats.commits;
+                document.getElementById(`${projectName}-pr-count`).textContent = stats.prs;
+                document.getElementById(`${projectName}-issue-count`).textContent = stats.issues;
+            } else {
+                document.getElementById(`${projectName}-commit-count`).textContent = 'N/A';
+                document.getElementById(`${projectName}-pr-count`).textContent = 'N/A';
+                document.getElementById(`${projectName}-issue-count`).textContent = 'N/A';
+            }
+        }
+
+        updateStats('FuelLabs', 'fuels-ts', 'fuels');
+        updateStats('solana-labs', 'explorer', 'explorer');
     </script>
 </body>
 </html>
+ 
