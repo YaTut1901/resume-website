@@ -534,7 +534,7 @@
 
         async function fetchGitHubStats(owner, repo) {
             const headers = {
-                "Authorization": "Bearer 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",
+                "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`,
                 "Accept": "application/vnd.github.v3+json"
             }
 
